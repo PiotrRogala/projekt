@@ -41,6 +41,16 @@ public class CarService {
 		this.carDAO = carDAO;
 	}
 	
+	
+	
+	public Validator getValidator() {
+		return validator;
+	}
+
+	public void setValidator(Validator validator) {
+		this.validator = validator;
+	}
+
 	public Set<ConstraintViolation<Car>> validate(Car c) {
 		Set<ConstraintViolation<Car>> bledy = validator.validate(c);
 		return bledy;
