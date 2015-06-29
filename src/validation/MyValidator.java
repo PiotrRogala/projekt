@@ -23,5 +23,11 @@ ConstraintValidator<FirstCharacterBig, String>{
 		}
 		return check;
 	}
+	
+	public boolean isValid(String value) {
+		boolean check = true;
+			if (Character.isLowerCase(value.charAt(0))) check = false;
+		return check;
+	}
 
 }
